@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 20px;
+}
+
+.display {
+    width: 320px;
+    min-height: 90px;
+    background: #1a1a2e;
+    color: #ffffff;
+    font-size: 2.2rem;
+    text-align: right;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid #16213e;
+    overflow: hidden;
+}
+
+.box {
+    width: 320px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background: #16213e;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.box button {
+    height: 60px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #0f3460;
+    color: #ffffff;
+    transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.box button:hover {
+    background: #1a4d8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box button:nth-child(11),
+.box button:nth-child(12),
+.box button:nth-child(13),
+.box button:nth-child(14) {
+    background: #e94560;
+    color: #ffffff;
+}
+
+.box button:nth-child(11):hover,
+.box button:nth-child(12):hover,
+.box button:nth-child(13):hover,
+.box button:nth-child(14):hover {
+    background: #ff5f7a;
+}
+
+.box button:nth-child(15) {
+    background: #00b894;
+    color: #ffffff;
+}
+
+.box button:nth-child(15):hover {
+    background: #00d1a7;
+}
+
+.box button:nth-child(16) {
+    background: #fdcb6e;
+    color: #1a1a2e;
+}
+
+.box button:nth-child(16):hover {
+    background: #ffd98a;
+}
