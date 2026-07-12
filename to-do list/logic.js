@@ -22,16 +22,17 @@ for(let task of tasks){
 
 function addTask(){
 
+    const task = input.value.trim();
 
-    if(input.value.trim() === ""){
+    if(task === ""){
         return;
     }
 
-    tasks.push(input.value);
+    tasks.push(task);
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
-    createTask(input.value)
+    createTask(task)
     
     input.value = "";
 }
@@ -61,8 +62,13 @@ function createTask(taskText){
     li.appendChild(dltbtn);
     dltbtn.addEventListener("click", function(event){
         event.stopPropagation();
-        li.remove();
-        
+            const index = tasks.indexOf(taskText);
+            if(index !== -1){
+                tasks.splice(index, 1);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+            }
+
+             li.remove();
     })
 
     
